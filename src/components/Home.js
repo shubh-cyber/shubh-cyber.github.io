@@ -4,14 +4,13 @@ import Navbar from './Navbar';
 import { useCallback } from "react";
 import Particles from "react-particles";
 import { loadFull } from "tsparticles";
-import { useLocation } from 'react-router-dom';
+import { BsFillEnvelopeFill } from 'react-icons/bs'
+import { FaGithub } from 'react-icons/fa6'
+import { SiLinkedin } from 'react-icons/si'
+import { BiCodeAlt } from 'react-icons/bi'
 
 const Home = () => {
   const particlesInit = useCallback(async engine => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
     await loadFull(engine);
 }, []);
 
@@ -109,8 +108,6 @@ const Home = () => {
     "detectRetina": true,
   }
 
-  const match = useLocation()
-
     return (
       <>
         <div className='backImg'>
@@ -120,10 +117,14 @@ const Home = () => {
           init={particlesInit}
           options={options}
           /> 
-          <Navbar path={match.pathname} />
+          <div style={{ position: 'fixed' }}>
+            <Navbar/>
+          </div>
           <div className='intro'>
+            <div style={{ color: 'rgba(64, 224, 208, 0.4)', fontSize: '8vh', display: 'flex', justifyContent: 'center'}}>
+              <BiCodeAlt style={{ marginRight: '20px' }}/>
+            </div>
             <div className='heading'>
-              {/* <h3> */}
                 <p>S</p>
                   <p>H</p>
                   <p>U</p>
@@ -136,17 +137,12 @@ const Home = () => {
                   <p>A</p>
                   <p>R</p>
                   <p>I</p>
-              {/* </h3> */}
             </div>
-            <div className='fadeInAndOut'>
-              <div>MEAN/MERN</div>
-              <div>SQL</div>
-              <div>NestJS</div>
-              <div>Typescript/Javascript/Python</div>
-              <div>Flask</div>
-              <div>Data Science</div>
+            <div style={{ color: 'rgba(64, 224, 208, 0.6)', fontSize: '5vh', display: 'block'}}>
+              <a href="mailto:shubhadabari@gmail.com" style={{ color: 'rgba(64, 224, 208, 0.6)', fontSize: '5vh'}}><BsFillEnvelopeFill style={{ marginRight: '20px' }}/></a>
+              <a href="https://github.com/shubh-cyber" style={{ color: 'rgba(64, 224, 208, 0.6)', fontSize: '5vh'}}><FaGithub style={{ marginRight: '20px' }}/></a>
+              <a href="https://www.linkedin.com/in/shubhada-bari-a3b08a1a0/" style={{ color: 'rgba(64, 224, 208, 0.6)', fontSize: '5vh'}}><SiLinkedin style={{ marginRight: '20px' }}/></a>
             </div>
-            <div className='fadeIn'>Full-Stack Developer</div>
           </div>
         </div>
       </>

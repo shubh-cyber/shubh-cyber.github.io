@@ -38,13 +38,13 @@ const AnimatedTextCharacter = ({ text }) => {
 
   return (
     <motion.div
-      style={{ overflow: "hidden", display: "flex", height: "500px", width: "100%", justifyContent: "center", font: '5em Comfortaa', fontFamily: 'Comfortaa, cursive' }}
+      style={{ overflow: "hidden", display: "flex", height: "2em", width: "100%", justifyContent: "center", font: '5em Comfortaa', fontFamily: 'Comfortaa, cursive', marginTop: '20px' }}
       variants={container}
       initial="hidden"
       animate="visible"
     >
       {letters.map((letter, index) => (
-        <motion.span variants={child} key={index} drag dragSnapToOrigin={"true"} style={{ cursor: "grab", color: 'black', textShadow: '0 0 7px #30D5C8'}}
+        <motion.span variants={child} key={index} drag dragSnapToOrigin={"true"} style={{ cursor: "grab", color: '#F4FDFF', textShadow: '0 0 10px #30D5C8'}}
         dragConstraints={{
           top: -125,
           right: 125,

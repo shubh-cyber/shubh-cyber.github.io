@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+.backImg{
+   min-height: 100%;
+   background-image: url(turquoise.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: center center;
+   height: 100vh;
+   z-index: -1;
+}
+
+.particles{
+  position: fixed;
+  width: 100%;
+}
+
+.intro{
+  position: fixed;
+  color: aliceblue;
+  /* border: 5px solid aliceblue; */
+  height: 200px;
+  width: 30%;
+  text-align: center;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* .intro::before{
+  position: absolute;
+        content: '';
+        background: inherit;
+        height: 150px;
+        width: 385px;
+        left: 0px;
+        right: 0;
+        top: 0px;
+        bottom: 0;
+        box-shadow: inset 0 0 0 3000px rgba(150, 150, 150, 0.192);
+        filter: blur(10px);
+        border-radius: 15px;
+} */
+
+p{
+  display: inline-flex;
+  white-space: pre-wrap;
+  font-size: 37px;
+  margin-top: 0%;
+  text-shadow: '0 0 8px #30D5C8';
+}
+
+.heading>p{
+  transition: transform .2s;
+}
+
+.heading>p:hover{
+  transform: scale(1.4);
+}
+
+.fadeInAndOut{
+  text-align: center;
+  color: aliceblue;
+}
+
+.fadeInAndOut>div{
+  -webkit-animation: fadeinout 4s linear forwards;
+  animation: fadeinout 4s linear forwards;
+  height: 0px;
+  opacity: 0;
+  display: block;
+}
+
+.fadeInAndOut div:nth-child(1){
+  animation-delay:2s;
+}
+
+.fadeInAndOut div:nth-child(2){
+  animation-delay:6s;
+}
+
+.fadeInAndOut div:nth-child(3){
+  animation-delay:10s;
+}
+
+.fadeInAndOut div:nth-child(4){
+  animation-delay:14s;
+}
+
+.fadeInAndOut div:nth-child(5){
+  animation-delay:18s;
+}
+
+.fadeInAndOut div:nth-child(6){
+  animation-delay:22s;
+}
+
+/* .fadeIn{
+  animation-delay:26s;
+} */
+
+.fadeIn{
+  -webkit-animation: fadein 4s linear forwards;
+  animation: fadein 4s linear forwards;
+  height: 0px;
+  opacity: 0;
+  display: block;
+  animation-delay: 26s;
+}
+
+@-webkit-keyframes fadeinout {
+0% { opacity: 0; }
+50% { opacity: 1;
+      height: auto;
+      width: auto; }
+100% { opacity: 0; }
+}
+
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  50% { opacity: 1;
+        height: auto;
+        width: auto; }
+  100% { opacity: 0; }
+}
+
+@-webkit-keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1;
+        height: auto;
+        width: auto; }
+  }
+  
+  @keyframes fadein {
+    0% { opacity: 0; }
+    100% { opacity: 1;
+          height: auto;
+          width: auto; }
+  }
